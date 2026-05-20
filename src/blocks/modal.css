@@ -1,0 +1,217 @@
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal__container {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 10px;
+  width: 430px;
+  transform: scale(0.8) translateY(-20px);
+  transition: transform 0.5s ease;
+}
+
+.modal_is-opened {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.modal_is-opened .modal__container {
+  transform: scale(1) translateY(0);
+}
+.modal__close {
+  background: no-repeat;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  background-color: transparent;
+  background-image: url("../images/CloseIcon.svg");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  padding: 0;
+  z-index: 999;
+}
+.modal__close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.modal__name {
+  width: 100%;
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 34px 64px 18px 36px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  padding: 36px;
+}
+.modal__input {
+  line-height: 100%;
+  font-size: 14px;
+  padding: 0;
+  padding-bottom: 12.66px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.modal__button {
+  background-color: #000;
+  color: #fff;
+  width: 358px;
+  height: 50px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  align-items: flex-end;
+  padding: 14px 19px;
+  border-radius: 2px;
+  border: 0;
+}
+.modal__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal__container_type_preview {
+  background-color: transparent;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+  border-radius: 0;
+  width: auto;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__preview-image {
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+}
+
+.modal__preview-caption {
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  padding: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.modal__container_type_preview .modal__close {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+}
+
+.modal__input_type_error {
+  border-color: red;
+  border-width: 1px;
+}
+
+.modal__error {
+  font-size: 12px;
+  line-height: 1.25;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.3s;
+  min-height: 12px;
+  margin-bottom: 30px;
+}
+
+.modal__error_visible {
+  opacity: 1;
+}
+
+.modal__button_disabled {
+  color: #c4c4c4;
+  background-color: #f7f7f7;
+  border: 1px solid #c4c4c4;
+  cursor: default;
+  cursor: not-allowed;
+  opacity: 0.6 
+}
+
+.modal__button_disabled:hover {
+  color: #c4c4c4;
+  background-color: transparent;
+  border-color: #c4c4c4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.modal__button_disabled:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+@media screen and (max-width: 630px) {
+  .modal__container {
+    width: 282px;
+    margin: auto;
+  }
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    bottom: calc(100% + 13.64px);
+    left: calc(100% - 31px);
+  }
+  .modal__button {
+    width: 238px;
+    height: 46px;
+    padding: 14px;
+    line-height: 17px;
+    font-size: 14px;
+  }
+  .modal__input {
+    margin-bottom: 45px;
+  }
+  .modal__form {
+    max-width: 238px;
+    padding: 22px;
+  }
+  .modal__name {
+    max-width: 238px;
+    line-height: 21.75px;
+    font-size: 18px;
+    margin: 25px 22px 53px 22px;
+  }
+  .modal__container_type_preview {
+    max-width: 240px;
+    max-height: 299px;
+  }
+
+  .modal__preview-image {
+    max-width: 240px;
+    max-height: 299px;
+  }
+}

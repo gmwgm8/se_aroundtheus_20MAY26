@@ -1,0 +1,40 @@
+.page {
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+.page__section {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page__content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 67px;
+  max-width: 880px;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+@media screen and (max-width: 770px) {
+  .page__section {
+    margin: 0 20px;
+    max-width: calc(100% - 40px);
+  }
+  .page__section {
+    max-width: 584px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .page__section {
+    margin: 0 19px;
+    max-width: calc(100% - 38px);
+  }
+  .page__content {
+    margin-bottom: 36px;
+  }
+}
