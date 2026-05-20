@@ -65,6 +65,20 @@ UserInfo.js - User profile management
 
 Use of webpack, babel js transpiler, postcss for either connecting different files, updating js scripts or css to older syntax automatically.
 
+Project 9 
+
+token: 2b48dd88-50ac-414a-8881-48fb10a92df3
+
+Create the Api class — a new Api.js file with methods for every server request (get user, get cards, update profile, add/delete card, like/unlike, update avatar).
+Load user info + cards on page load — use Promise.all() so both fetch before rendering; remove old hardcoded cards.
+Edit profile — PATCH /users/me, save changes to server.
+Add a new card — POST /cards, render the returned card.
+Delete confirmation popup — new modal that asks "Are you sure?" before deleting.
+Delete a card — DELETE /cards/:id on confirm.
+Like / unlike — PUT and DELETE on /cards/:id/likes, toggle heart color.
+Update avatar — PATCH /users/me/avatar, opened via the profile image.
+"Saving..." UX — change button text while any form request is in flight.
+Modify Layout via figma
 
 
 

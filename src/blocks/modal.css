@@ -172,7 +172,15 @@
   outline: none;
   box-shadow: none;
 }
+.modal__confirm {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+}
 
+.modal__name_type_confirm {
+  margin: 0 0 38px 0;
+}
 
 @media screen and (max-width: 630px) {
   .modal__container {
@@ -213,5 +221,11 @@
   .modal__preview-image {
     max-width: 240px;
     max-height: 299px;
+  }
+    .modal__confirm {
+    padding: 22px;
+  }
+  .modal__name_type_confirm {
+    margin: 0 0 30px 0;
   }
 }

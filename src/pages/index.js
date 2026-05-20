@@ -113,7 +113,7 @@ const avatarPopup = new PopupWithForm("#avatar-edit-modal", (formData) => {
 });
 avatarPopup.setEventListeners();
 
-document.querySelector(".profile__image").addEventListener("click", () => {
+document.querySelector(".profile__image-wrapper").addEventListener("click", () => {
   avatarPopup.open();
 });
 
